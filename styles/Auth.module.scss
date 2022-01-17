@@ -1,0 +1,22 @@
+.formLogin {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  left: 60%;
+  background: white;
+
+  .icon {
+    margin-left: 10px;
+  }
+  input {
+    border: none;
+    margin: 15px auto;
+    padding-left: 10px;
+    outline: none;
+  }
+}
+
