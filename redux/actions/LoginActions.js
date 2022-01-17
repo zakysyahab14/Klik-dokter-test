@@ -12,14 +12,12 @@ export const userLogin = (user) => async (dispatch) => {
             type: USER_LOGIN,
             payload: res.data
         })
-        console.log(res);
     } catch(err) {
         const errors = err.response.data.errors
         dispatch({
             type: ERROR,
             payload: errors
         })
-        console.log(errors);
     }
 }
 export const userRegister = (user) => async (dispatch) => {
@@ -29,14 +27,12 @@ export const userRegister = (user) => async (dispatch) => {
             type: USER_REGISTER,
             payload: res.data
         })
-        console.log(res);
     } catch(err) {
         const errors = err.response.data.errors
         dispatch({
             type: ERROR,
             payload: errors
         })
-        console.log(errors);
     }
 }
 
@@ -45,5 +41,4 @@ export const userLogout = (user) => async (dispatch) => {
       type: USER_LOGOUT,
       payload: user,
     });
-    console.log("berhasil logout");
   };

@@ -103,7 +103,6 @@ export const deleteProduct = (product) => async (dispatch) => {
 export const searchProduct = (product) => async (dispatch) => {
     try {
         const res = await axios.post(`${baseUrl}/item/search`, product)
-            console.log(res)
         dispatch({
             type: GET_PRODUCT,
             payload: [res.data],
