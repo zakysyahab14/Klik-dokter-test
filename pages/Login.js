@@ -32,9 +32,6 @@ const Login = () => {
         password: password,
       })
     );
-
-    router.push("/");
-    window.location.replace("/")
   };
 
   return (
