@@ -32,7 +32,13 @@ const Dashboard = () => {
         required: '${label} is required!',
       };
     const modalProduct = () => {
-        setModalProductVisible(true)
+        if (isLogin) {
+            setModalProductVisible(true)
+        } else {
+            Modal.info({
+                content: 'You need to Login'
+            })
+        }
     }
     const showModal = (record) => {
         if (isLogin) {

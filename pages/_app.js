@@ -1,6 +1,6 @@
 import '../styles/globals.scss'
 import { Provider } from 'react-redux';
-import Store from '../redux/store/Store';
+import Store from '../redux/store/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MyApp({ Component, pageProps }) {
