@@ -1,14 +1,11 @@
 import { ERROR, USER_LOGIN, USER_LOGOUT, USER_REGISTER } from "../reducer/Types";
 import axios from "axios";
 import Cookie from "js-cookie";
-import { useRouter } from "next/dist/client/router";
 import { Modal } from 'antd'
 
 
 const baseUrl = "https://hoodwink.medkomtek.net/api";
-
 export const userLogin = (user) => async (dispatch) => {
-    const router = useRouter();
     try {
         const res = await axios.post(`${baseUrl}/auth/login`, user);
         Cookie.set("token", res.data.token);
@@ -16,7 +13,6 @@ export const userLogin = (user) => async (dispatch) => {
             type: USER_LOGIN,
             payload: res.data
         })
-        router.push("/");
         window.location.replace("/")
     } catch(err) {
         Modal.info({
